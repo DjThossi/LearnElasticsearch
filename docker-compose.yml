@@ -1,0 +1,11 @@
+version: "2.0"
+services:
+  elasticsearch:
+    image: elasticsearch:2.1.2
+  sense:
+    image: sense
+    build: ./
+    ports:
+      - 5601:5601
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
