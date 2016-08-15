@@ -2,6 +2,8 @@ version: "2.0"
 services:
   elasticsearch:
     image: elasticsearch:2.1.2
+    ports:
+      - 9200:9200
   sense:
     image: sense
     build: ./
